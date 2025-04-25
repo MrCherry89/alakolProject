@@ -1,0 +1,268 @@
+body,
+html {
+  overflow-x: hidden;
+  font-family: "Inter";
+  &.overflow {
+    overflow: hidden !important;
+  }
+}
+
+body {
+  @include flex;
+  @include dir-col;
+  @include justify-between;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+}
+
+input,
+textarea {
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+  background: none;
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.wrapper {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.main-title {
+  color: #2E608E;
+  font-family: "Inter";
+  font-size: 49.688px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 93%;
+  letter-spacing: -1.409px;
+  margin-right: 20px;
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
+  @media (max-width: 767px) {
+    font-size: 28px;
+    }
+}
+
+.title-wrap{
+  @include flex;
+  @include align-center;
+  margin-bottom: 30px;
+  .slider-navigation{
+    width: 140px;
+    position: static;
+    @include flex;
+    @include justify-between;
+    @media (max-width: 1024px) {
+      width: 100px;
+      min-width: 100px;
+     }
+    button{
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #2E608E;
+      @include flex;
+      position: static;
+      transform: translate(0,0);
+      @media (max-width: 1024px) {
+       width: 44px;
+       height: 44px;
+      }
+      &:before{
+        content: none;
+      }
+      &.slick-prev{
+        img{
+          transform: rotate(180deg);
+        }
+      }
+      img{
+        margin: auto;
+        @media (max-width: 1024px) {
+         width: 20px;
+         }
+      }
+    }
+  }
+}
+
+
+.green-btn{
+  @include flex;
+  @include align-center;
+  @include justify-center;
+  border-radius: 50px;
+  height: 65px;
+  width: 100%;
+  padding: 10px;
+  font-size: 28px;
+  color: #F3F3F3;
+  background: #0E9A26;
+  border: 2px solid #0E9A26;
+  &:hover{
+    color: #0E9A26;
+    background: white;
+  }
+  @media (max-width: 1024px) {
+    height: 55px;
+    font-size: 24px;
+  }
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
+}
+
+.main-form{
+  input{
+    height: 65px;
+    width: 100%;
+    padding: 0 20px;
+    border-radius: 8px;
+    background: white;
+    font-size: 28px;
+    color: #727272;
+    margin-bottom: 30px;
+    @include placeholder{
+      font-size: 28px;
+      color: #ABABAB;
+    }
+    @media (max-width: 1024px) {
+      margin-bottom: 20px;
+      font-size: 18px;
+      height: 55px;
+      @include placeholder{
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.tour-3d{
+  margin: 30px 0;
+  
+  .main-title{
+    margin-bottom: 30px;
+    @media (max-width: 767px) {
+     margin-bottom: 20px;
+      }
+  }
+  .block{
+    @include flex;
+    @media (max-width: 767px) {
+      min-height: 250px;
+      }
+    img{
+      width: 100%;
+      @media (max-width: 767px) {
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        }
+    }
+  }
+}
+
+.slider-navigation{
+  width: 140px;
+  position: static;
+  @include flex;
+  @include justify-between;
+  @media (max-width: 1024px) {
+    width: 100px;
+    min-width: 100px;
+   }
+  button{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #2E608E;
+    @include flex;
+    position: static;
+    transform: translate(0,0);
+    @media (max-width: 1024px) {
+     width: 44px;
+     height: 44px;
+    }
+    &:before{
+      content: none;
+    }
+    &.slick-prev{
+      img{
+        transform: rotate(180deg);
+      }
+    }
+    img{
+      margin: auto;
+      @media (max-width: 1024px) {
+       width: 20px;
+       }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
